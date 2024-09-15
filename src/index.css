@@ -1,0 +1,135 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+  width: 100%;
+  max-width: 700px;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+a{
+  display: contents;
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-form{
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-form__button{
+  color: black;
+  margin-left: 10px;
+  background-color: #f9f9f9;
+}
+.search-form__input{
+  color: black;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+
+.search-result-item{
+  display: flex;
+  filter: none;
+  margin: 15px auto;
+  width: 80%;
+  border: 2px solid #2f2f2f;
+  h1{
+    font-size: 1em;
+  }
+  h2{
+    font-size: 0.8em
+  }
+  transition:transform 0.3s ease;
+}
+.search-result-item:hover{
+  border: 2px solid #f4f4f4;
+  transform: scale(1.02);
+  h2 {
+      color: #14a278;
+    }
+}
+
+.search-result-item__img{
+  aspect-ratio: 4/3;
+  width: 90px;
+  object-fit: cover;
+}
+.search-result-item__data{
+  flex-grow: 1;
+  padding: 12px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+@media screen and (min-width: 900px) {
+  .search-result-item{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .search-form{
+    width: 100%;
+  }
+  .search-results{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: auto auto;
+  }
+}
